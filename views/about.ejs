@@ -1,0 +1,66 @@
+<!Doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- The title of the webpage-->
+    <title>About <%=appName%></title>
+    <!-- Link to the external CSS stylesheet-->
+    <link rel="stylesheet" type="text/css" href="/main.css" />
+  </head>
+  <body>
+
+    <!-- Navigation bar with links to different sections of the website -->
+    <nav>
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+        <a href="/register">Register</a>
+        <a href="/login">Sign in</a>
+        <a href="/account">Account</a>
+        <a href="/courses">Video Section</a>
+        <a href="/search-result">Search</a>
+        <a href="/contact">Contact</a>
+    </nav>
+  
+    <!-- Main heading of the webpage-->
+    <h1>Welcome to <%=appName%> An E-learning Website</h1>
+
+    <!-- Images displayed in a row with inline-block styling -->
+    <img src="/image/image3.jpg" alt="Image 3" style="display: inline-block; width: 30%;">
+    <img src="/image/image2.jpg" alt="Image 2" style="display: inline-block; width: 30%;">
+    <img src="/image/image4.jpg" alt="Image 4" style="display: inline-block; width: 30%;">
+    
+    <!-- Section describing the e-learning platform-->
+    <section>
+        <p>Harper, is an e-learning website providing free short courses for all</p>
+        <p>learners, we are a dedicated online learning platform with an incredible</p>
+        <p>selection of short videos tailored to boost your career.</p>
+        <p>Our short courses are designed to meet your unique interests and goals.</p>
+        <p>Each course is designed to be engaging and accessible, allowing you to</p>
+        <p>learn at your own pace and fit into your busy lifestyle. With our courses,</p>
+        <p>you can unlock your potential and achieve your personal and</p>
+        <p>professional goals.</p>
+        <p>Explore our diverse selection today and embark on your learning journey</p>
+        <p>with us.</p>
+        <p>Why wait? Start your exciting journey with Harper today and unlock your</p>
+        <p>full potential while exploring new skills.</p>
+
+        <!-- Buttons linking to different sections of the website -->
+        <a href="/register" class="btn btn-one">Get Started</a>
+        <a href="/search-result" class="btn">Browse Courses</a>
+        <a href="/courses" class="btn">Video Section</a>
+        <a href="/" class="btn">Back to Home</a>
+    </section>
+
+    <!-- Footer section with copyright information and additional navigation links -->
+    <footer>
+        <p>&copy; <%= new Date().getFullYear() %> Harper eLearning Platform. All rights reserved.</p>
+        <nav>
+            <a href="/about">About</a>
+            <a href="/register">Join</a>
+            <a href="/contact">Contact</a>
+        </nav>
+    </footer>
+      
+</body>
+</html>

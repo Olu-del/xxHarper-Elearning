@@ -1,0 +1,60 @@
+<!Doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- The title of the webpage-->
+    <title>Contact <%=appName%></title>
+    <!-- Link to the external CSS stylesheet-->
+    <link rel="stylesheet" type="text/css" href="/main.css" />
+  </head>
+  <body>
+
+    <!-- Navigation bar with links to different sections of the website -->
+    <nav>
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+        <a href="/register">Register</a>
+        <a href="/login">Sign in</a>
+        <a href="/account">Account</a>
+        <a href="/courses">Video Section</a>
+        <a href="/search-result">Search</a>
+        <a href="/contact">Contact</a>
+    </nav>
+    
+    <!-- Main heading of the webpage-->
+    <h1>Welcome to <%=appName%> An E-learning Website</h1>
+    <h2>Contact Us</h2>
+
+    <!-- Form for users to submit their contact information and questions -->
+    <form method="POST" action="/contact">
+        <p>First name: <input id="first" type="text" name="first"/></p>
+        <p>Last name: <input id="last" type="text" name="last"/></p>
+        <p>Email: <input id="email" type="email" name="email"/></p>
+        <p>Phone number: <input id="phone" type="tel" name="phone"/></p>
+        
+        <!-- Text area for users to write their questions -->
+        <p>Question: <textarea id="question" name="question" placeholder="Write something.." style="height:100px"></textarea></p>
+        
+        <!-- Submit button for the form -->
+        <input type="submit" value="Submit" />
+    </form>
+
+        <!-- Buttons linking to different sections of the website -->
+        <a href="/register" class="btn btn-one">Get Started</a>
+        <a href="/search-result" class="btn">Browse Courses</a>
+        <a href="/courses" class="btn">Video Section</a>
+        <a href="/" class="btn">Back to Home</a>
+
+        <!-- Footer section with copyright information and additional navigation links -->
+     <footer>
+         <p>&copy; <%= new Date().getFullYear() %> Harper eLearning Platform. All rights reserved.</p>
+        <nav>
+            <a href="/about">About</a>
+            <a href="/register">Join</a>
+            <a href="/contact">Contact</a>
+        </nav>
+     </footer>
+      
+</body>
+</html>

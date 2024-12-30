@@ -1,0 +1,59 @@
+<!Doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- The title of the webpage-->
+    <title>Sign in</title>
+    <!-- Link to the external CSS stylesheet-->
+    <link rel="stylesheet" type="text/css" href="/main.css" />
+  </head>
+  <body>
+
+    <!-- Navigation bar with links to different sections of the website -->
+    <nav>
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+        <a href="/register">Register</a>
+        <a href="/account">Account</a>
+        <a href="/courses">Video Section</a>
+        <a href="/search-result">Search</a>
+        <a href="/contact">Contact</a>
+    </nav>
+
+    <!-- Main heading of the webpage-->
+    <h1>Welcome to <%=appName%> An E-learning Website</h1>
+
+    <!-- Subheading for the sign-in section -->
+    <h2>Sign in to your account</h2>
+    
+    <!-- Link to the registration page for users who don't have an account -->
+    <a href="/register" class="register">Don't have an account with us? Register</a>
+    
+    <!-- Form for logging in -->
+    <form action="/login" method="post">
+       <p><input type="email" name="email" placeholder="Email" required></p>
+       <p><input type="password" name="password" placeholder="Password" required></p>
+       <button type="submit">Login</button>
+    </form>
+
+    <!-- Buttons linking to different sections of the website -->
+    <a href="/register" class="btn btn-one">Get Started</a>
+    <a href="/search-result" class="btn">Browse Courses</a>
+    <a href="/courses" class="btn">Video Section</a>
+    <a href="/" class="btn">Back to Home</a>
+
+    <!-- Footer section with copyright information and additional navigation links -->
+    <footer>
+        <p>&copy; <%= new Date().getFullYear() %> Harper eLearning Platform. All rights reserved.</p>
+        <nav>
+          <a href="/about">About</a>
+          <a href="/register">Join</a>
+          <a href="/contact">Contact</a>
+        </nav>
+    </footer>
+      
+</body>
+</html>
+
+
