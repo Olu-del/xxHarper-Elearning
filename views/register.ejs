@@ -1,0 +1,59 @@
+<!Doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- The title of the webpage-->
+    <title>Register</title>
+    <!-- Link to the external CSS stylesheet-->
+    <link rel="stylesheet" type="text/css" href="/main.css" />
+  </head>
+  <body>
+
+    <!-- Navigation bar with links to different sections of the website -->
+    <nav>
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+        <a href="/login">Sign in</a>
+        <a href="/account">Account</a>
+        <a href="/courses">Video Section</a>
+        <a href="/search-result">Search</a>
+        <a href="/contact">Contact</a>
+    </nav>
+
+    <!-- Main heading of the webpage-->
+    <h1>Welcome to <%=appName%> An E-learning Website</h1>
+
+    <!-- Subheading for the registration section -->
+    <h2>Register to get Started</h2>
+
+    <!-- Link to the login page for users who already have an account -->
+    <a href="/login" class="login">Already have an account? Sign in</a>
+    
+    <!-- Form for registering a new account -->
+    <form action="/register" method="post">
+       <p>First name: <input type="text" name="first_name" placeholder="First Name" required></p>
+       <p>Last name: <input type="text" name="last_name" placeholder="Last Name" required></p>
+       <p>Email: <input type="email" name="email" placeholder="Email" required></p>
+       <p>Password: <input type="password" name="password" placeholder="Password" required></p>
+       <p>Remember Password: <input type="checkbox" name="remember" placeholder="checkbox" required/></p>
+       <p>Phone number: <input type="phone number" name="phone_number" placeholder="phone number" required></p>
+       <button type="submit">Register</button>
+    </form> 
+      
+    <!-- Buttons linking to different sections of the website -->
+    <a href="/search-result" class="btn">Browse Courses</a>
+    <a href="/courses" class="btn">Video Section</a>
+    <a href="/" class="btn">Back to Home</a>
+    
+    <!-- Footer section with copyright information and additional navigation links -->
+    <footer>
+      <p>&copy; <%= new Date().getFullYear() %> Harper eLearning Platform. All rights reserved.</p>
+        <nav>
+          <a href="/about">About</a>
+          <a href="/register">Join</a>
+          <a href="/contact">Contact</a>
+        </nav>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Account</title>
+        <link rel="stylesheet" type="text/css" href="/main.css" />
+    </head>
+    <body>
+        <!-- Navigation bar -->
+        <nav>
+          <a href="/">Home</a>
+          <a href="/about">About</a>
+          <a href="/account">Account</a>
+          <a href="/courses">Video Section</a>
+          <a href="/search-result">Search</a>
+          <a href="/contact">Contact</a>
+        </nav>
+
+        <!-- Welcome message for the user-->
+        <h1>Welcome, <%= username %>!</h1>
+
+        <!-- Signout confirmation-->
+        <a href="/signout-confirmation">Sign out</a>
+
+
+        <!--User search history-->
+       <h2>Your Search History:</h2>
+       <% if (searchhistory.length > 0) { %>
+        <ul>
+            <% searchhistory.forEach(function(record) { %>
+                <li>
+                     "<%= record.search_query %>" (searched on <%= new Date(record.timestamp).toLocaleString() %>)
+                </li>
+                <% }); %>
+        </ul>
+        <% } else { %>
+            <p>No search history found.</p>
+        <% } %>
+
+        <!-- Footer -->
+        <footer>
+            <p>&copy; <%= new Date().getFullYear() %> Harper eLearning Platform. All rights reserved.</p>
+            <nav>
+               <a href="/about">About</a>
+               <a href="/register">Join</a>
+               <a href="/contact">Contact</a>
+            </nav>
+        </footer>
+    </body>
+</html>
