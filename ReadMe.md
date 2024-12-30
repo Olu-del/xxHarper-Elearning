@@ -42,7 +42,7 @@ Node.js, express, ejs and MySQL
 
 How I Set Up the Database
 Step 2:
-I Opened MySQL and createed the database:
+I Opened MySQL and created the database:
     CREATE DATABASE user_eLearning.
 
     USE user_eLearning.
