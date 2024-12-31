@@ -150,7 +150,7 @@ router.get('/signout-confirmation', function(req, res) {
  router.get('/search-result', (req, res) => {
      const keyword = req.query.keyword;
      const videoId = req.query.videoId;
-    const userId = req.session.userId; // Ensure userId is defined here
+     const userId = req.session.userId; // Ensure userId is defined here
     
 
      // Fetch all video titles for the dropdown
@@ -194,6 +194,12 @@ router.get('/signout-confirmation', function(req, res) {
  });
  });
  
+
+ // Route to fetch and display videos 
+ router.get('/videos', (req, res) => { 
+    req.app.locals.connection.query('SELECT * FROM videos', (err, results) => 
+        { if (err) { return res.status(500).send('Error fetching videos'); 
+        } res.render('videos', { videos: results }); }); });
 
 // Export the router object so index.js can access it
 module.exports = router;

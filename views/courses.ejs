@@ -1,121 +1,45 @@
-<!Doctype html>
-<html>
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- The title of the webpage-->
-    <title>Videos</title>
-    <!-- Link to the external CSS stylesheet-->
-    <link rel="stylesheet" type="text/css" href="/main.css" />
-  </head>
-  <body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Videos</title>
+  <link rel="stylesheet" type="text/css" href="/main.css" />
+</head>
+<body>
+  <nav>
+    <a href="/">Home</a>
+    <a href="/about">About</a>
+    <a href="/register">Register</a>
+    <a href="/login">Sign in</a>
+    <a href="/account">Account</a>
+    <a href="/courses">Video Section</a>
+    <a href="/search-result">Search</a>
+    <a href="/contact">Contact</a>
+  </nav>
 
-     <!-- Navigation bar with links to different sections of the website -->
-     <nav>
-       <a href="/">Home</a>
-       <a href="/about">About</a>
-       <a href="/register">Register</a>
-       <a href="/login">Sign in</a>
-       <a href="/account">Account</a>
-       <a href="/courses">Video Section</a>
-       <a href="/search-result">Search</a>
-       <a href="/contact">Contact</a>
-     </nav>
+  <a href="/register" class="btn btn-one">Get Started</a>
+  <a href="/search-result" class="btn">Browse Courses</a>
+  <a href="/" class="btn">Back to Home</a>
 
-      <!-- Buttons linking to different sections of the website -->
-      <a href="/register" class="btn btn-one">Get Started</a>
-      <a href="/search-result" class="btn">Browse Courses</a>
-      <a href="/" class="btn">Back to Home</a>
-    
-      <!-- Main heading of the webpage -->
-      <h1>Video tutorial on how to make money. Watch it to learn tips and tricks for success on the platform.</h1>
-      
-      <!-- Container for video tutorials -->
-      <div class="video-page">
-      
-      <!-- Video tutorial with a poster image and controls -->
-      <video width="300" height="200" controls poster="/image/easy.jpg">
-        <source src="/video/THREE POWERFUL WEBSITES TO MAKE EASY MONEY.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
+  <h1>Video tutorial on how to make money. Watch it to learn tips and tricks for success on the platform.</h1>
 
-      <!-- Video tutorial with a poster image and controls -->
-      <video width="300" height="200" controls poster="/image/plug in.webp">
-        <source src="/video/How To Install Wordpress Plugin Manually _ Wordpress Plugins Install Tutorial 2021.mp4" type="video/mp4">
+  <div class="video-page">
+    <% videos.forEach(video => { %>
+      <video width="300" height="200" controls poster="<%= video.poster %>">
+        <source src="<%= video.video_url %>" type="video/mp4">
         Your browser does not support the video tag.
       </video>
-      
-      <!-- Video tutorial with a poster image and controls -->
-      <video width="300" height="200" controls poster="/image/paste.webp">
-        <source src="/video/How to Make Money by Copying and Pasting on Google _ Copy and Paste Earn Money Online.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-     
-      <!-- Video tutorial with a poster image and controls -->
-      <video width="300" height="200" controls poster="/image/widget.webp">
-        <source src="/video/How To Add Widget On Wordpress in 2021 __ Widget Adding Process For Beginners.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
+    <% }) %>
+  </div>
 
-      <!-- Video tutorial with a poster image and controls -->
-      <video width="300" height="200" controls poster="/image/fiverr.webp">
-        <source src="/video/Fiverr Affiliate Program Tutorial for Beginners_ Make Money with Fiverr Affiliates.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-   
-      <!-- Video tutorial with a poster image and controls -->
-      <video width="300" height="200" controls poster="/image/tshirt.jpg">
-        <source src="/video/How to Be Successful on Etsy _ How to Start an Online T-Shirt Business in 2021 for Beginners.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-    
-      <!-- Video tutorial with a poster image and controls -->
-      <video width="300" height="200" controls poster="/image/thumbnail.jpg">
-        <source src="/video/HOW TO MAKE MONEY ON FIVERR BY MAKING YOUTUBE THUMBNAILS.mp4">
-        Your browser does not support the video tag.
-      </video>
-
-      <!-- Video tutorial with a poster image and controls -->
-      <video width="300" height="200" controls poster="/image/upwork.jpg">
-        <source src="/video/HOW TO MAKE MONEY ON UPWORK.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-    
-      <!-- Video tutorial with a poster image and controls -->
-      <video width="300" height="200" controls poster="/image/upload.webp">
-        <source src="/video/HOW TO RE- UPLOAD YOUTUBE VIDEO.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-
-      <!-- Video tutorial with a poster image and controls -->
-      <video width="300" height="200" controls poster="/image/yoast seo.webp">
-        <source src="/video/HOW TO SETUP YOAST SEO FOR BEGINNERS.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-    
-      <!-- Video tutorial with a poster image and controls -->
-      <video width="300" height="200" controls poster="/image/rank.webp">
-        <source src="/video/HOW TO SETUP RANK MATHS SEO TUTORIAL.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-
-      <!-- Video tutorial with a poster image and controls -->
-      <video width="300" height="200" controls poster="/image/wordfence.webp">
-        <source src="/video/HOW TO SETUP WORDFENCE SECURITY PLUGIN FOR FREE.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-  
-    </div>
-    
-    <!-- Footer section with copyright information and additional navigation links -->
-    <footer>
-      <p>&copy; <%= new Date().getFullYear() %> Harper eLearning Platform. All rights reserved.</p>
-      <nav>
-        <a href="/about">About</a>
-        <a href="/register">Join</a>
-        <a href="/contact">Contact</a>
-      </nav>
-    </footer>
-
-  </body>
+  <footer>
+    <p>&copy; <%= new Date().getFullYear() %> Harper eLearning Platform. All rights reserved.</p>
+    <nav>
+      <a href="/about">About</a>
+      <a href="/register">Join</a>
+      <a href="/contact">Contact</a>
+    </nav>
+  </footer>
+</body>
 </html>

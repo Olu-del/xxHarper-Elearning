@@ -1,66 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!-- The title of the webpage -->
-        <title>Search Videos</title>
-        <!-- Link to the external CSS stylesheet-->
-        <link rel="stylesheet" type="text/css" href="/main.css" />
-    </head>
-    <body>
-        <!-- Navigation bar with links to different sections of the website -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- The title of the webpage -->
+    <title>Search Videos</title>
+    <!-- Link to the external CSS stylesheet-->
+    <link rel="stylesheet" type="text/css" href="/main.css" />
+</head>
+<body>
+    <!-- Navigation bar with links to different sections of the website -->
+    <nav>
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+        <a href="/register">Register</a>
+        <a href="/login">Sign in</a>
+        <a href="/account">Account</a>
+        <a href="/courses">Video Section</a>
+        <a href="/search-result">Search</a>
+        <a href="/contact">Contact</a>
+    </nav>
+
+    <!-- Main heading of the webpage -->
+    <h1>Search for Videos</h1>
+
+    <!-- Search form for users to enter keywords and submit the search -->
+    <form action="/search-result" method="get">
+        <input type="text" name="keyword" placeholder="Enter keyword" required>
+        <button type="submit">Search</button>
+    </form> 
+
+    <!-- Displaying search results -->
+    <% if (videos.length > 0) { %>
+        <% videos.forEach(function(video) { %>
+            <div class="video">
+                <!-- Displaying the title and description of each video -->
+                <h2><%= video.title %></h2>
+                <p><%= video.description %></p>
+                <!-- Video player with a poster image and controls -->
+                <video width="300" height="200" controls poster="<%= video.poster %>">
+                    <source src="<%= video.video_url %>" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        <% }) %>
+    <% } else { %>
+        <!-- Message displayed if no videos are found for the entered keyword -->
+        <p>No videos found for "<%= keyword %>".</p>
+    <% } %>
+
+    <!-- Footer section with copyright information and additional navigation links -->
+    <footer>
+        <p>&copy; <%= new Date().getFullYear() %> Harper eLearning Platform. All rights reserved.</p>
         <nav>
-            <a href="/">Home</a>
-            <a href="/about">About</a>
-            <a href="/register">Register</a>
-            <a href="/login">Sign in</a>
-            <a href="/account">Account</a>
-            <a href="/courses">Video Section</a>
-            <a href="/search-result">Search</a>
-            <a href="/contact">Contact</a>
+           <a href="/about">About</a>
+           <a href="/register">Join</a>
+           <a href="/contact">Contact</a>
         </nav>
-
-        <!-- Main heading of the webpage -->
-        <h1>Search for Videos</h1>
-
-        <!-- Search form for users to enter keywords and submit the search -->
-        <form action="/search-result" method="get">
-            <input type="text" name="keyword" placeholder="Enter keyword" required>
-            <button type="submit">Search</button>
-        </form> 
-
-        <!-- Displaying search results -->
-        <% if (videos.length > 0) { %>
-            <% videos.forEach(function(video) { %>
-                <div class="video">
-                    <!-- Displaying the title and description of each video -->
-                    <h2><%= video.title %></h2>
-                    <p><%= video.description %></p>
-                    <!-- Video player with a poster image and controls -->
-                    <video width="300" height="200" controls poster="<%= video.poster %>">
-                        <source src="<%= video.url %>" type="video/mp4">
-                        Your browser does not support the video tag.
-            </video>
-                </div>
-            <% }) %>
-        <% } else { %>
-            <!-- Message displayed if no videos are found for the entered keyword -->
-            <p>No videos found for "<%= keyword %>".</p>
-            <% } %>
-
-
-    
-            <!-- Footer section with copyright information and additional navigation links -->
-            <footer>
-                <p>&copy; <%= new Date().getFullYear() %> Harper eLearning Platform. All rights reserved.</p>
-                <nav>
-                   <a href="/about">About</a>
-                   <a href="/register">Join</a>
-                   <a href="/contact">Contact</a>
-                </nav>
-            </footer>
-    </body>
+    </footer>
+</body>
 </html>
 
- 
+
+
+
