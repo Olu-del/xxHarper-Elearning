@@ -29,7 +29,7 @@ app.use(express.static(__dirname + '/public'));
 const connection = mysql.createConnection({
    host: 'localhost',
    user: 'harper_elearning_app',
-   password: '', // Leave password blank
+   password: '',
    database: 'user_elearning'
 });
 
