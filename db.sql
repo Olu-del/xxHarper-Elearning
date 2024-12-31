@@ -98,3 +98,9 @@ CREATE TABLE IF NOT EXISTS videos (
     description TEXT,
     video_url VARCHAR(255) NOT NULL
 );
+
+
+GRANT ALL PRIVILEGES ON user_elearning.* TO 'harper_elearning_app'@'localhost'; ALTER USER 'harper_elearning_app'@'localhost' IDENTIFIED BY 'abquarmt'
+
+
+

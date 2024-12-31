@@ -101,7 +101,7 @@ Step4:
     
 
 Step5:
-I Created .env file in the root directory and add database configuration:
+I Created db file in the root directory and add database configuration:
     DB_HOST=localhost
     DB_USER=root
     DB_PASSWORD=my_password
