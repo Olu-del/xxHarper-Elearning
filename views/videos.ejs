@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- The title of the webpage-->
+  <title>Videos</title>
+  <!-- Link to the external CSS stylesheet-->
+  <link rel="stylesheet" type="text/css" href="/main.css" />
+</head>
+<body>
+
+    <!-- Navigation bar with links to different sections of the website -->
+    <nav>
+      <a href="/">Home</a>
+      <a href="/about">About</a>
+      <a href="/register">Register</a>
+      <a href="/login">Sign in</a>
+      <a href="/account">Account</a>
+      <a href="/videos">Video Section</a>
+      <a href="/search-result">Search</a>
+      <a href="/contact">Contact</a>
+    </nav>
+
+    <!-- Buttons linking to different sections of the website -->
+    <a href="/register" class="btn btn-one">Get Started</a>
+    <a href="/search-result" class="btn">Browse Courses</a>
+    <a href="/" class="btn">Back to Home</a>
+
+    <!-- Buttons linking to different sections of the website -->
+    <h1>Video tutorial on how to make money. Watch it to learn tips and tricks for success on the platform.</h1>
+
+    <!-- Container for video tutorials -->
+    <div class="video-page">
+      <% videos.forEach(video => { %>
+        <video width="300" height="200" controls poster="<%= video.poster %>">
+        <source src="<%= video.video_url %>" type="video/mp4">
+        Your browser does not support the video tag.
+        </video>
+      <% }) %>
+    </div>
+
+     <!-- Footer section with copyright information and additional navigation links -->
+     <footer>
+        <p>&copy; <%= new Date().getFullYear() %> Harper eLearning Platform. All rights reserved.</p>
+        <nav>
+           <a href="/about">About</a>
+           <a href="/register">Join</a>
+           <a href="/contact">Contact</a>
+        </nav>
+      </footer>
+</body>
+</html>

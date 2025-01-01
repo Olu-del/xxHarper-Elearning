@@ -41,12 +41,6 @@ router.post('/contact', function(req, res) {
 });
 
 
-router.get('/courses', function(req, res) {
-    // Render the courses page with appData
-    res.render('courses.ejs', appData);
-});
-
-
 router.get('/login', function(req, res) {
     // Render the login page with appData
     res.render('login.ejs', appData);
@@ -147,13 +141,13 @@ router.get('/signout-confirmation', function(req, res) {
  });
 
 
- router.get('/search-result', (req, res) => {
+ router.get('/search-result',function (req, res) {
      const keyword = req.query.keyword;
      const videoId = req.query.videoId;
-     const userId = req.session.userId; // Ensure userId is defined here
+     const userId = req.session.userId;
     
 
-     // Fetch all video titles for the dropdown
+     // Fetch all video titles
      req.app.locals.connection.query('SELECT id, title FROM videos', (err, videoTitles) => {
         if (err) {
             console.error('Database error:', err);
@@ -196,7 +190,7 @@ router.get('/signout-confirmation', function(req, res) {
  
 
  // Route to fetch and display videos 
- router.get('/videos', (req, res) => { 
+ router.get('/videos', function(req, res) { 
     req.app.locals.connection.query('SELECT * FROM videos', (err, results) => 
         { if (err) { return res.status(500).send('Error fetching videos'); 
         } res.render('videos', { videos: results }); }); });
