@@ -189,7 +189,8 @@ router.get('/signout-confirmation', function(req, res) {
  });
  
 
- // Route to fetch and display videos 
+ 
+        
         router.get('/videos', function(req, res) {
             req.app.locals.connection.query('SELECT * FROM videos', (err, results) => {
                 if (err) {
@@ -199,7 +200,6 @@ router.get('/signout-confirmation', function(req, res) {
             });
         });
         
-
 // Export the router object so index.js can access it
 module.exports = router;
 
