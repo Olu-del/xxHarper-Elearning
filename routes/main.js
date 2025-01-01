@@ -190,10 +190,15 @@ router.get('/signout-confirmation', function(req, res) {
  
 
  // Route to fetch and display videos 
- router.get('/videos', function(req, res) { 
-    req.app.locals.connection.query('SELECT * FROM videos', (err, results) => 
-        { if (err) { return res.status(500).send('Error fetching videos'); 
-        } res.render('videos', { videos: results }); }); });
+        router.get('/videos', function(req, res) {
+            req.app.locals.connection.query('SELECT * FROM videos', (err, results) => {
+                if (err) {
+                    return res.status(500).send('Error fetching videos');
+                }
+                res.render('videos.ejs', { videos: results });
+            });
+        });
+        
 
 // Export the router object so index.js can access it
 module.exports = router;
